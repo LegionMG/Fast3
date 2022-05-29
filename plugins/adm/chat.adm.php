@@ -53,7 +53,7 @@ function chat_adm($author, $login, $params, $params2){
 
 	// help
 	if($params[0] == 'help'){
-		$msg = localeText(null,'server_message') . localeText(null,'interact').'/adm restart|rs [wu|np|q|quick|reset],next [#|envir|reset],prev [#|envir|reset],map [#],setnext [#|envir],setprev [#|envir],setmap [#],endround,kick,ban,unban,black,unblack,ignore,unignore,guest,mode,name,comment,srvpass,spectpass,pass,ftimeout,chattime,maxplayers,maxspec,opponents,ladder,voteratio,votetimeout,cancel,specforce,spec,play,free,autorestart,noautorestart,autonewrestart,noautonewrestart,replay,respawn,askvote';
+		$msg = localeText(null,'server_message') . localeText(null,'interact').'/adm restart|rs [wu|np|q|quick|reset],next [#|envir|reset],prev [#|envir|reset],map [#],setnext [#|envir],setprev [#|envir],setmap [#],endround,kick,ban,unban,black,unblack,ignore,unignore,guest,mode,name,comment,srvpass(=playpass),spectpass(=specpass),pass,ftimeout,chattime,maxplayers,maxspec,opponents,ladder,voteratio,votetimeout,cancel,specforce,spec,play,free,autorestart,noautorestart,autonewrestart,noautonewrestart,replay,respawn,askvote';
 		// send message to user who wrote command
 		addCall(null,'ChatSendToLogin', $msg, $login);
 
@@ -601,7 +601,7 @@ function chat_adm($author, $login, $params, $params2){
 
 
 		// server password
-	}elseif($params[0] == 'srvpass'){
+	}elseif($params[0] == 'srvpass' || $params[0] == 'playpass'){
 		if(isset($_LadderServerLimits['LadderServerLimitMax']) &&
 			 $_LadderServerLimits['LadderServerLimitMax'] > 50000){
 
@@ -629,7 +629,7 @@ function chat_adm($author, $login, $params, $params2){
 
 
 		// server password
-	}elseif($params[0] == 'spectpass'){
+	}elseif($params[0] == 'spectpass' || $params[0] == 'specpass'){
 		if(isset($_LadderServerLimits['LadderServerLimitMax']) &&
 			 $_LadderServerLimits['LadderServerLimitMax'] > 50000){
 

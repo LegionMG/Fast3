@@ -44,7 +44,9 @@ Récap des  commandes admin de Fast (faites /help, /adm, ou la commande sans vale
     /adm name "xxx"   --> nom du serveur (ou: srvname )
     /adm comment "xxx"  --> commentaire du serv
     /adm srvpass "***"  --> password pour player (/adm srvpass none --> enlève le pass)
+    /adm playpass "***"  --> password pour player (/adm playpass none --> enlève le pass)
     /adm spectpass "***"  --> password pour spec (/adm spectpass none --> enlève le pass)
+    /adm spectpass "***"  --> password pour spec (/adm specpass none --> enlève le pass)
     /adm pass "***"  --> password pour player et spec (/adm pass none --> enlève le pass)
     /adm maxplayers [num]    --> mettre le nombre max de joueurs
     /adm maxspec [num]    --> mettre le nombre max de spec
